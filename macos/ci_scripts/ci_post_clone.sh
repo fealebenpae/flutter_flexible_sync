@@ -6,6 +6,8 @@ cd $CI_PRIMARY_REPOSITORY_PATH # change working directory to the root of your cl
 git clone https://github.com/flutter/flutter.git --depth 1 -b stable $HOME/flutter
 export PATH="$PATH:$HOME/flutter/bin"
 
+flutter doctor
+
 # Install Flutter artifacts for iOS (--ios), or macOS (--macos) platforms.
 flutter precache --macos
 
@@ -15,8 +17,6 @@ flutter pub get
 # Install CocoaPods using Homebrew.
 HOMEBREW_NO_AUTO_UPDATE=1 # disable homebrew's automatic updates.
 brew install cocoapods
-
-dart run realm install
 
 cd macos && pod install
 
