@@ -20,7 +20,7 @@ dart run realm install
 
 cd macos && pod install
 
-flutter build macos 
+flutter build macos --config-only
 
 # Install CocoaPods dependencies.
 # cd macos && pod install # run `pod install` in the `ios` directory.
